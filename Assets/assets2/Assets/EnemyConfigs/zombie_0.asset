@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad84baa8ccce09d43a795fcc75f36452, type: 3}
+  m_Name: zombie_0
+  m_EditorClassIdentifier: 
+  enemyHP: 9
+  enemyDamage: 1
+  deathAnimation: {fileID: 21300000, guid: bc187c15a9db8114f8cbf9006479d327, type: 3}
+  enemyEXP: 5
+  walkSpeed: 0.03
+  gold: 5
