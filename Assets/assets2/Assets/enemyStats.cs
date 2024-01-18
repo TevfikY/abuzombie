@@ -33,11 +33,12 @@ public class enemyStats : MonoBehaviour
 
     public void getHit(float dmg)
     {
-       
         particle.Emit(40);
         hp -= dmg;
+        Debug.Log(hp);
         if (hp <= 0)
         {
+            Debug.Log("zombie dead");
             gameManager.GetComponent<gameManager>().addGold(gold);
             GetComponent<SpriteRenderer>().sortingOrder = 0;
             GetComponent<enemyMovement_0>().enemyIsDead();

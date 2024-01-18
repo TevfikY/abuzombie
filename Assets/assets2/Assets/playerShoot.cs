@@ -29,8 +29,8 @@ public class playerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-      
+
+        Debug.Log(isAiming);
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -84,30 +84,28 @@ public class playerShoot : MonoBehaviour
     public void Shoot(GameObject enemy)
     {
         
-       
-        
-        
-        if (bulletCount < 5)
-        {
-            if (Time.time > timeReseter)
-            {
-                if (Time.time > bulletPerSecondReseter)
-                {
-                    muzzleFlash.Emit(30);
-                    bulletPerSecondReseter = Time.time + bulletPerSecond;
-                    bulletCount++;
-                    enemy.GetComponent<enemyStats>().getHit(bulletDamage);
-                    
-                }
-            }
-            
-        }
-        else
-        {
-            
-            timeReseter = Time.time + timeBetweenShots;
-            bulletCount = 0;
-        }
+        //
+        // if (bulletCount < 5)
+        // {
+        //     if (Time.time > timeReseter)
+        //     {
+        //         if (Time.time > bulletPerSecondReseter)
+        //         {
+        //             muzzleFlash.Emit(30);
+        //             bulletPerSecondReseter = Time.time + bulletPerSecond;
+        //             bulletCount++;
+        //             enemy.GetComponent<enemyStats>().getHit(bulletDamage);
+        //             
+        //         }
+        //     }
+        //     
+        // }
+        // else
+        // {
+        //     
+        //     timeReseter = Time.time + timeBetweenShots;
+        //     bulletCount = 0;
+        // }
     }
     GameObject GetClosestEnemy(List<GameObject> enemies)
     {

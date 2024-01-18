@@ -42,10 +42,9 @@ public class weaponCode : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D col)
     {
-        
+       
         if (col.gameObject.tag == "Enemy")
         {
-            
             enemies.Add(col.gameObject);
         }
     }
@@ -55,7 +54,6 @@ public class weaponCode : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            Debug.Log("zirt");
             //Player.GetComponent<joystickMovement>().checkIsShooting(isShooting());
             isAiming = true;
             GameObject Target = col.gameObject;
@@ -110,6 +108,7 @@ public class weaponCode : MonoBehaviour
                     bulletPerSecondReseter = Time.time + timeBetweenShots;
                     bulletCount++;
                     enemy.GetComponent<enemyStats>().getHit(Damage);
+                    Debug.Log("damaga given = "+ Damage);
                     
                     
                 }
