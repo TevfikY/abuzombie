@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1281145390281036405}
   - component: {fileID: 2056558642336229509}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyFirst
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 0}
-  walkSpeed: 4
+  walkSpeed: 3
   enemyConfig: {fileID: 11400000, guid: 9a86747ccbafef642b5f65dcfaa99f8c, type: 2}
