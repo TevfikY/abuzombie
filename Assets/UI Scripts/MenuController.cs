@@ -1,46 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
 
-using Unity.VisualScripting;
-
-public class MenuController : MonoBehaviour
+public class MainMenuController : MonoBehaviour
 {
-    [Header("Volume Setting")] 
-    [SerializeField] private TMP_Text volumeTextValue = null;
-    [SerializeField] private Slider volumeSlider = null;
-    [SerializeField] private float defaultVolume = 1.0f;
-    
-    
-    
-    
-    [Header("Confirmation")] 
+    [Header("Confirmation")]
     [SerializeField] private GameObject confirmationPrompt = null;
-    
-    
-    [Header("Levels to Load")] 
-    public string _newGamelevel;
-    private string levelToLoad;
-    [SerializeField] private GameObject noSavedGameDialog = null;
 
-    public void NewGameDialogYes()
-    {  
-        SceneManager.LoadScene(_newGamelevel);
+    [Header("Game Scene")]
+    public string newGameLevel;
+
+    public Button musicButton;
+    public Button sfxButton;
+
+    private void Start()
+    {
+        musicButton.onClick.AddListener(ToggleMusic);
+        sfxButton.onClick.AddListener(ToggleSFX);
     }
 
-    public void LoadGameDialogYes()
+    private void ToggleMusic()
     {
-        if (PlayerPrefs.HasKey("SavedLevel"))
+        AudioManager.Instance.ToggleMusic(!AudioManager.Instance.musicSource.enabled);
+    }
+
+    private void ToggleSFX()
+    {
+        AudioManager.Instance.ToggleSFX(!AudioManager.Instance.sfxSource.enabled);
+    }
+
+    public void NewGameDialogYes()
+    {
+        // Show confirmation prompt
+        if (confirmationPrompt != null)
         {
-            levelToLoad = PlayerPrefs.GetString("SavedLevel");
-            SceneManager.LoadScene(levelToLoad);
+            confirmationPrompt.SetActive(true);
         }
         else
         {
-            noSavedGameDialog.SetActive(true);
+            // If no confirmation prompt, load the new game scene directly
+            LoadNewGameScene();
+        }
+    }
+
+    public void NewGameDialogNo()
+    {
+        // Close confirmation prompt
+        if (confirmationPrompt != null)
+        {
+            confirmationPrompt.SetActive(false);
         }
     }
 
@@ -48,47 +56,10 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
-    public void changeVolume(float newVolume)
-    {
-        PlayerPrefs.SetFloat("volume", newVolume);
-        AudioListener.volume = PlayerPrefs.GetFloat("volume");
-        volumeTextValue.text = newVolume.ToString("0.0");
-    }
 
-    public void SetVolume(float volume)
+    private void LoadNewGameScene()
     {
-        
-        AudioListener.volume = volume;
-        //Debug.Log(AudioListener.volume);
-        volumeTextValue.text = volume.ToString("0.0");
+        // Load the new game scene
+        SceneManager.LoadScene(newGameLevel);
     }
-    
-
-    public void VolumeApply()
-    {
-        float newVolume = AudioListener.volume;
-        Debug.Log(newVolume);  
-        PlayerPrefs.SetFloat("masterVolume", newVolume);
-        PlayerPrefs.Save();
-        StartCoroutine(ConfirmationBox());
-    }
-
-    public void ResetButton(string MenuType)
-    {
-        if (MenuType == "Audio")
-        {
-            AudioListener.volume = defaultVolume;
-            volumeSlider.value = defaultVolume;
-            volumeTextValue.text = defaultVolume.ToString("0.0");
-            VolumeApply();
-
-        }
-    }
-    public IEnumerator ConfirmationBox()
-    {
-        confirmationPrompt.SetActive(true);
-        yield return new WaitForSeconds(2);
-        confirmationPrompt.SetActive(false);
-    }
-    
 }
