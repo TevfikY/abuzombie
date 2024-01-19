@@ -30,7 +30,7 @@ public class playerShoot : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(isAiming);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D col)

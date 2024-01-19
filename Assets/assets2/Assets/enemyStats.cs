@@ -33,7 +33,7 @@ public class enemyStats : MonoBehaviour
 
     public void getHit(float dmg)
     {
-        particle.Emit(40);
+        //particle.Emit(40);
         hp -= dmg;
         Debug.Log(hp);
         if (hp <= 0)
