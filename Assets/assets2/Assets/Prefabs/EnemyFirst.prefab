@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6395721346984551881}
   - component: {fileID: 1281145390281036405}
   - component: {fileID: 2056558642336229509}
+  - component: {fileID: 5335472239330863789}
   m_Layer: 0
   m_Name: EnemyFirst
   m_TagString: Enemy
@@ -127,3 +128,24 @@ MonoBehaviour:
   particle: {fileID: 0}
   walkSpeed: 3
   enemyConfig: {fileID: 11400000, guid: 9a86747ccbafef642b5f65dcfaa99f8c, type: 2}
+--- !u!95 &5335472239330863789
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807553495472955544}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8481375259fb8324db8e5a0e97a9598c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

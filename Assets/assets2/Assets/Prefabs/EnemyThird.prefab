@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1002662741742445136}
   - component: {fileID: 1415143932291944303}
   - component: {fileID: 4763296995391818256}
+  - component: {fileID: 576742014423209020}
   m_Layer: 0
   m_Name: EnemyThird
   m_TagString: Enemy
@@ -28,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7093542078248493337}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00029462925, y: 0.00006200583, z: -0.7142182, w: 0.69992316}
-  m_LocalPosition: {x: 3.85, y: -9.9, z: -0}
+  m_LocalRotation: {x: 0.0002523622, y: -0.00016679997, z: 0.004276056, w: 0.9999908}
+  m_LocalPosition: {x: 3.74, y: -9.9, z: -0}
   m_LocalScale: {x: 3.494515, y: 3.494515, z: 0.87362874}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0.029, y: -0.019, z: -91.158}
+  m_LocalEulerAnglesHint: {x: 0.029, y: -0.019, z: 0.49}
 --- !u!212 &6311908768603526422
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -127,3 +128,24 @@ MonoBehaviour:
   particle: {fileID: 0}
   walkSpeed: 2
   enemyConfig: {fileID: 11400000, guid: 9a86747ccbafef642b5f65dcfaa99f8c, type: 2}
+--- !u!95 &576742014423209020
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7093542078248493337}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9073a0a5257265a49ad48e716783be11, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
