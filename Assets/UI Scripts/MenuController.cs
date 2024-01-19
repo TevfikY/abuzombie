@@ -12,15 +12,14 @@ public class MainMenuController : MonoBehaviour
 
     public Button musicButton;
     public Button sfxButton;
-    public Button pauseButton;  // Button for pausing
-    public Button resumeButton; // Button for resuming
+    public Button pauseButton; 
+    public Button resumeButton; 
 
     private bool isPaused = false;
 
     private void Start()
     {
         musicButton.onClick.AddListener(ToggleMusic);
-        sfxButton.onClick.AddListener(ToggleSFX);
         pauseButton.onClick.AddListener(PauseGame);
         resumeButton.onClick.AddListener(ResumeGame);
     }
@@ -37,6 +36,7 @@ public class MainMenuController : MonoBehaviour
 
     private void PauseGame()
     {
+        Debug.Log("pressed pause");
         Time.timeScale = 0f; // Pause the game by setting time scale to 0
         isPaused = true;
     }
@@ -55,15 +55,14 @@ public class MainMenuController : MonoBehaviour
             confirmationPrompt.SetActive(true);
         }
         else
-        {
-            // If no confirmation prompt, load the new game scene directly
+        {   
             LoadNewGameScene();
         }
     }
 
     public void NewGameDialogNo()
     {
-        // Close confirmation prompt
+   
         if (confirmationPrompt != null)
         {
             confirmationPrompt.SetActive(false);
@@ -77,7 +76,8 @@ public class MainMenuController : MonoBehaviour
 
     private void LoadNewGameScene()
     {
-        // Load the new game scene
+        Time.timeScale = 1f;
+        isPaused = false;
         SceneManager.LoadScene(loadNewScene);
     }
 }
