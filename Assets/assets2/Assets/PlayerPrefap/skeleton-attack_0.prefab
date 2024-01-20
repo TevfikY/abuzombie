@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5471462202958020171}
   - component: {fileID: 4176370356418742781}
   - component: {fileID: 527403426365352856}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: skeleton-attack_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e522577dfe7a5f448a289b459e31eae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 0}
 --- !u!114 &5471462202958020171
 MonoBehaviour:
   m_ObjectHideFlags: 0
