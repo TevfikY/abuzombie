@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad84baa8ccce09d43a795fcc75f36452, type: 3}
-  m_Name: zombie_0
+  m_Name: zombie_2
   m_EditorClassIdentifier: 
   enemyHP: 3
   enemyDamage: 1
@@ -18,4 +18,4 @@ MonoBehaviour:
   enemyEXP: 5
   walkSpeed: 0.03
   gold: 5
-  angle: 0
+  angle: -90

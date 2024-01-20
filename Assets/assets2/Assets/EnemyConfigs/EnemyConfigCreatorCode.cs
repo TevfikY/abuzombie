@@ -11,6 +11,7 @@ public class EnemyConfigCreatorCode : ScriptableObject
     [SerializeField] private float enemyEXP;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float gold;
+    [SerializeField] private float angle;
 
     public float getHP()
     {
@@ -50,6 +51,11 @@ public class EnemyConfigCreatorCode : ScriptableObject
     public float getGold()
     {
         return gold;
+    }
+
+    public float getAngle()
+    {
+        return angle;
     }
     
 }

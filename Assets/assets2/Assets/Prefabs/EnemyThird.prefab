@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e522577dfe7a5f448a289b459e31eae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: b57359046ddc7ca4ca165b7f7d0d7607, type: 2}
 --- !u!114 &1415143932291944303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particle: {fileID: 0}
   walkSpeed: 2
-  enemyConfig: {fileID: 11400000, guid: 9a86747ccbafef642b5f65dcfaa99f8c, type: 2}
+  enemyConfig: {fileID: 11400000, guid: b57359046ddc7ca4ca165b7f7d0d7607, type: 2}
 --- !u!95 &576742014423209020
 Animator:
   serializedVersion: 5
