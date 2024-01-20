@@ -19,8 +19,7 @@ public class enemyMovement_0 : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //if(!isDead)
-        catchPlayer();
+        if(!isDead) catchPlayer();
         
     }
     

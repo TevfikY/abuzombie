@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletsInMag: 30
   Damage: 1
-  timeBetweenShots: 1
+  timeBetweenShots: 0.5
   reloadTime: 3
