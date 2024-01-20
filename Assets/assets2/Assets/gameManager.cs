@@ -74,10 +74,10 @@ public class gameManager : MonoBehaviour
             GameObject player = GameObject.FindWithTag("Player");
             GameObject oldGun = GameObject.FindWithTag("Gun");
             GameObject selected = weapon1;
-
+            gold = gold - 100;
             
             Destroy(oldGun);
-            player.GetComponent<CircleCollider2D>().radius = 15;
+            player.GetComponent<CircleCollider2D>().radius = 10;
             //Destroy(GameObject.FindWithTag("Gun"));
             Instantiate(selected,transform.position, player.transform.rotation);
             market.SetActive(false);
@@ -88,7 +88,7 @@ public class gameManager : MonoBehaviour
     public void weapon2Buy()
     {
         
-        if (gold >= 200)
+        if (gold >= 800)
         {
             
             GameObject player = GameObject.FindWithTag("Player");
@@ -97,9 +97,9 @@ public class gameManager : MonoBehaviour
 
             
             Destroy(oldGun);
-            
+            gold = gold - 800;
             //Destroy(GameObject.FindWithTag("Gun"));
-            player.GetComponent<CircleCollider2D>().radius = 15;
+            player.GetComponent<CircleCollider2D>().radius = 10;
             Instantiate(selected,transform.position, player.transform.rotation);
             market.SetActive(false);
             resumeTime();

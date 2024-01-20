@@ -116,12 +116,16 @@ public class playerShoot : MonoBehaviour
         {
             foreach (GameObject t in enemies)
             {
-                float dist = Vector3.Distance(t.gameObject.transform.position, currentPos);
-                if (dist < minDist)
+                if (t != null)
                 {
-                    tMin = t;
-                    minDist = dist;
+                    float dist = Vector3.Distance(t.gameObject.transform.position, currentPos);
+                    if (dist < minDist)
+                    {
+                        tMin = t;
+                        minDist = dist;
+                    }
                 }
+                
             }  
         }
         
