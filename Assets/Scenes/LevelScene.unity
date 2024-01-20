@@ -4077,7 +4077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hp: 100
   gameOverPage: {fileID: 1339493691}
-  joystick: {fileID: 0}
+  joystick: {fileID: 789426174}
 --- !u!61 &2036501147
 BoxCollider2D:
   m_ObjectHideFlags: 0
