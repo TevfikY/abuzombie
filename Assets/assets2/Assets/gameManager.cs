@@ -9,7 +9,8 @@ public class gameManager : MonoBehaviour
     [SerializeField] private Text goldText;
     private bool isTimeRunning = true;
     private static float gold;
-    [SerializeField] private List<GameObject> case1Guns;
+    [SerializeField] private GameObject weapon1;
+    [SerializeField] private GameObject weapon2;
     [SerializeField] private GameObject market;
     private Transform PlayerTransform;
     private Vector3 playerRot;
@@ -57,15 +58,35 @@ public class gameManager : MonoBehaviour
         goldText.text = gold.ToString();
     }
 
-    public void case1()
+    public void weapon1Buy()
     {
         
-        if (gold >= 300)
+        if (gold >= 100)
         {
             
             GameObject player = GameObject.FindWithTag("Player");
             GameObject oldGun = GameObject.FindWithTag("Gun");
-            GameObject selected = case1Guns[Random.Range(0, case1Guns.Count)];
+            GameObject selected = weapon1;
+
+            
+            Destroy(oldGun);
+            
+            //Destroy(GameObject.FindWithTag("Gun"));
+            Instantiate(selected,transform.position, player.transform.rotation);
+            market.SetActive(false);
+            resumeTime();
+        }
+    }
+    
+    public void weapon2Buy()
+    {
+        
+        if (gold >= 100)
+        {
+            
+            GameObject player = GameObject.FindWithTag("Player");
+            GameObject oldGun = GameObject.FindWithTag("Gun");
+            GameObject selected = weapon2;
 
             
             Destroy(oldGun);
