@@ -29,9 +29,17 @@ public class enemySpawner : MonoBehaviour
         currentWave = waves[currentWaveNumber];
         SpawnWave();
         GameObject[] totalEnemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (totalEnemies.Length == 0 && !canSpawn && currentWaveNumber+1 != waves.Length)
+        if (!canSpawn && currentWave.noOfEnemies == 0 && currentWaveNumber + 1 < waves.Length)
         {
+            // If the current wave is completed, spawn the next wave
             SpawnNextWave();
+        }
+
+        // If there are no enemies and the current wave is completed
+        if (canSpawn && nextSpawnTime < Time.time)
+        {
+            // Spawn enemies for the current wave
+            SpawnWave();
         }
 
     }

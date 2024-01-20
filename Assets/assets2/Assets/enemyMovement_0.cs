@@ -24,19 +24,17 @@ public class enemyMovement_0 : MonoBehaviour
         
     }
     
-    public void catchPlayer()
+ public void catchPlayer()
     {
-        
-        if (transform.position != player.transform.position && !isAttacking )
+        if (transform.position != player.transform.position && !isAttacking)
         {
-            
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, walkSpeed*Time.deltaTime);
-            difference = player.transform.position - transform.position;
-            difference.Normalize();
-            
-            float rotationZ = MathF.Atan2(difference.y, difference.x) * Mathf.Rad2Deg +180 ;
-            
-            transform.rotation = Quaternion.Euler(0f,0f,rotationZ) ;
+            // Move towards the player
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, walkSpeed * Time.deltaTime);
+
+            // Look at the player
+            Vector2 lookDir = player.transform.position - transform.position;
+            float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
     }
 
