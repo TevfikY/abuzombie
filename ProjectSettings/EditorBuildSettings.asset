@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/UIScene.unity
+    guid: a3573b242227fae47aba852bb03cd4f8
+  - enabled: 1
+    path: Assets/Scenes/LevelScene.unity
+    guid: 71bf55a997aa9b34e9f26a0c5868dd78
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 232d1635381e0f04e9a19e03131065e5, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 6f193aac563b1474db4f6bf4609c80e9, type: 2}
