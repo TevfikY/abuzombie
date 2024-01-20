@@ -20,7 +20,7 @@ public class joystickMovement : MonoBehaviour
 
     private void Update()
     {
-        isShooting = GetComponent<playerShoot>().isShooting();
+        
         Vector2 move = new Vector2(joystick.Horizontal, joystick.Vertical);
 
         // Move the character

@@ -54,7 +54,7 @@ public class weaponCode : MonoBehaviour
     {
         if (col.gameObject.tag == "Enemy")
         {
-            //Player.GetComponent<joystickMovement>().checkIsShooting(isShooting());
+            Player.GetComponent<joystickMovement>().checkIsShooting(isShooting());
             isAiming = true;
             GameObject Target = col.gameObject;
             if (enemies.Count > 0)
@@ -83,7 +83,7 @@ public class weaponCode : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             enemies.Remove(other.gameObject);
-            //Player.GetComponent<joystickMovement>().checkIsShooting(isShooting());
+            Player.GetComponent<joystickMovement>().checkIsShooting(isShooting());
         }
     }
 

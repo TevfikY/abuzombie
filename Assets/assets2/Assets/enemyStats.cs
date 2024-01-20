@@ -14,6 +14,7 @@ public class enemyStats : MonoBehaviour
     private float deathTime;
     private float gold;
     private GameObject gameManager;
+    private bool isDead = false;
     void Awake()
     {
         hp = enemyConfig.getHP();
@@ -38,6 +39,7 @@ public class enemyStats : MonoBehaviour
         Debug.Log(hp);
         if (hp <= 0)
         {
+            isDead = true;
             Debug.Log("zombie dead");
             gameManager.GetComponent<gameManager>().addGold(gold);
             GetComponent<SpriteRenderer>().sortingOrder = 0;
@@ -50,8 +52,11 @@ public class enemyStats : MonoBehaviour
 
     }
 
-    
 
+    public bool getIsDead()
+    {
+        return isDead;
+    }
     public float getWalkSpeed()
     {
         return walkSpeed;
