@@ -32,6 +32,9 @@ public class weaponCode : MonoBehaviour
         timeBetweenShots = weaponStats.getTimeBetweenShots();
         reloadTime = weaponStats.getReloadTime();
         Player = GameObject.FindWithTag("Player");
+        
+        string ammoString = bulletsInMag-bulletCount + "/" +  bulletsInMag;
+        GameObject.FindWithTag("GameManager").GetComponent<gameManager>().setAmmo(ammoString);
     }
 
     // Update is called once per frame
@@ -95,8 +98,8 @@ public class weaponCode : MonoBehaviour
     public void Shoot(GameObject enemy)
     {
         
-       
-        GameObject.FindWithTag("GameManager").GetComponent<gameManager>().setAmmo(getAmmo());
+       string ammoString = bulletsInMag-bulletCount + "/" +  bulletsInMag;
+        GameObject.FindWithTag("GameManager").GetComponent<gameManager>().setAmmo(ammoString);
         
         if (bulletCount < bulletsInMag)
         {

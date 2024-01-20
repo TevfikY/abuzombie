@@ -8,9 +8,11 @@ public class gameManager : MonoBehaviour
 
     [SerializeField] private Text goldText;
     [SerializeField] private Text ammoText;
+    [SerializeField] private Text hpText;
     private bool isTimeRunning = true;
     private static float gold;
     private static float Ammo;
+    private static int Hp;
     [SerializeField] private GameObject weapon1;
     [SerializeField] private GameObject weapon2;
     [SerializeField] private GameObject market;
@@ -19,10 +21,12 @@ public class gameManager : MonoBehaviour
     
     void Start()
     {
-        gold = 300;
+        gold = 0;
+        Hp = 100;
         goldText.text = gold.ToString();
         ammoText.text = Ammo.ToString();
         playerRot = new Vector3(0, 0, 0);
+        hpText.text = Hp.ToString();
 
     }
     
@@ -101,9 +105,20 @@ public class gameManager : MonoBehaviour
         }
     }
 
-    public void setAmmo( float ammo)
+    public void setAmmo( string ammo)
     {
-        Ammo = Ammo;
+
+        ammoText.text = ammo;
     }
-    
+
+    public void setHp(float hp)
+    {
+        hpText.text = hp.ToString();
+    }
+
+    public void restartGame()
+    {
+       // SceneManager.LoadScene()
+       // SceneManager.LoadScene(loadNewScene);
+    }
 }

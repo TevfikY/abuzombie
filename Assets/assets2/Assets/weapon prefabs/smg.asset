@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa4ff615c573844090a70b194d7553a, type: 3}
   m_Name: smg
   m_EditorClassIdentifier: 
-  bulletsInMag: 30
+  bulletsInMag: 15
   Damage: 1
   timeBetweenShots: 0.5
   reloadTime: 3

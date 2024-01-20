@@ -5,6 +5,9 @@ using UnityEngine;
 public class playerStats : MonoBehaviour
 {
     [SerializeField] private float Hp;
+    [SerializeField] private GameObject gameOverPage;
+    [SerializeField] private GameObject joystick;
+    
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -19,6 +22,13 @@ public class playerStats : MonoBehaviour
     public void getHit(float dmg)
     {
         Hp -= dmg;
-        Debug.Log(Hp);
+        GameObject.FindWithTag("GameManager").GetComponent<gameManager>().setHp(Hp);
+        if (Hp <= 0)
+        {
+            gameOverPage.SetActive(true);
+            joystick.SetActive(false);
+            GameObject.FindWithTag("GameManager").GetComponent<gameManager>().stopTime();
+        }
+        //Debug.Log(Hp);
     }
 }

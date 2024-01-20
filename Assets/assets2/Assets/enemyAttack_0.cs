@@ -23,6 +23,7 @@ public class enemyAttack_0 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("collision");
             if (!isFirstAttack)
             {
                 AttackTime = Time.time;
