@@ -7,8 +7,10 @@ public class gameManager : MonoBehaviour
 {
 
     [SerializeField] private Text goldText;
+    [SerializeField] private Text ammoText;
     private bool isTimeRunning = true;
     private static float gold;
+    private static float Ammo;
     [SerializeField] private GameObject weapon1;
     [SerializeField] private GameObject weapon2;
     [SerializeField] private GameObject market;
@@ -19,7 +21,7 @@ public class gameManager : MonoBehaviour
     {
         gold = 300;
         goldText.text = gold.ToString();
-        
+        ammoText.text = Ammo.ToString();
         playerRot = new Vector3(0, 0, 0);
 
     }
@@ -70,7 +72,7 @@ public class gameManager : MonoBehaviour
 
             
             Destroy(oldGun);
-            
+            player.GetComponent<CircleCollider2D>().radius = 15;
             //Destroy(GameObject.FindWithTag("Gun"));
             Instantiate(selected,transform.position, player.transform.rotation);
             market.SetActive(false);
@@ -92,10 +94,16 @@ public class gameManager : MonoBehaviour
             Destroy(oldGun);
             
             //Destroy(GameObject.FindWithTag("Gun"));
+            player.GetComponent<CircleCollider2D>().radius = 15;
             Instantiate(selected,transform.position, player.transform.rotation);
             market.SetActive(false);
             resumeTime();
         }
+    }
+
+    public void setAmmo( float ammo)
+    {
+        Ammo = Ammo;
     }
     
 }

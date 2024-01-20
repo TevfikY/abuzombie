@@ -96,7 +96,7 @@ public class weaponCode : MonoBehaviour
     {
         
        
-        
+        GameObject.FindWithTag("GameManager").GetComponent<gameManager>().setAmmo(getAmmo());
         
         if (bulletCount < bulletsInMag)
         {
@@ -141,5 +141,13 @@ public class weaponCode : MonoBehaviour
         }
         
         return tMin;
+    }
+
+    public float getAmmo()
+    {
+        
+        //String ammo = bulletsInMag-bulletCount + "/" + bulletsInMag ;
+        
+        return bulletCount;
     }
 }
