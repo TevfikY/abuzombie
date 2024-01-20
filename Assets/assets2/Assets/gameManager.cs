@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -87,7 +88,7 @@ public class gameManager : MonoBehaviour
     public void weapon2Buy()
     {
         
-        if (gold >= 100)
+        if (gold >= 200)
         {
             
             GameObject player = GameObject.FindWithTag("Player");
@@ -119,6 +120,16 @@ public class gameManager : MonoBehaviour
     public void restartGame()
     {
        // SceneManager.LoadScene()
-       // SceneManager.LoadScene(loadNewScene);
+        SceneManager.LoadScene("LevelScene");
+    }
+
+    public void closeMarket()
+    {
+            Time.timeScale = 1f; 
+            isTimeRunning = true;
+            market.SetActive(false);
+            
+            
+        
     }
 }

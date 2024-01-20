@@ -7,6 +7,7 @@ public class playerStats : MonoBehaviour
     [SerializeField] private float Hp;
     [SerializeField] private GameObject gameOverPage;
     [SerializeField] private GameObject joystick;
+    public Sprite deathImage;
     
     void Start()
     {
@@ -25,6 +26,7 @@ public class playerStats : MonoBehaviour
         GameObject.FindWithTag("GameManager").GetComponent<gameManager>().setHp(Hp);
         if (Hp <= 0)
         {
+            GetComponent<SpriteRenderer>().sprite = deathImage;
             gameOverPage.SetActive(true);
             joystick.SetActive(false);
             GameObject.FindWithTag("GameManager").GetComponent<gameManager>().stopTime();

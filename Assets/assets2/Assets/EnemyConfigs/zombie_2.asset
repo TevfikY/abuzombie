@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyHP: 6
   enemyDamage: 25
   deathAnimation: {fileID: 21300000, guid: 463a1229398d813459cbf65a9d87159c, type: 3}
-  enemyEXP: 5
+  enemyEXP: 50
   walkSpeed: 0.03
   gold: 5
   angle: -90

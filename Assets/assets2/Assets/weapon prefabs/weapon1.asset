@@ -15,4 +15,4 @@ MonoBehaviour:
   bulletsInMag: 20
   Damage: 3
   timeBetweenShots: 1
-  reloadTime: 3
+  reloadTime: 0.1

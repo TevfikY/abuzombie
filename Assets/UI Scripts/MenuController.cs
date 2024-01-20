@@ -11,7 +11,7 @@ public class MainMenuController : MonoBehaviour
     public string loadNewScene;
 
     public Button musicButton;
-    public Button sfxButton;
+ 
     public Button pauseButton; 
     public Button resumeButton; 
 
@@ -42,7 +42,7 @@ public class MainMenuController : MonoBehaviour
           Debug.Log("Time.timeScale: " + Time.timeScale);
     }
 
-    private void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1f; // Resume the game by setting time scale to 1
         isPaused = false;

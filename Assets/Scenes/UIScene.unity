@@ -455,17 +455,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &873596977 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5540319551055597036, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
-  m_PrefabInstance: {fileID: 447980461286301780}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &983140696 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7327388242099819388, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
@@ -856,7 +845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3293567338359095010, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4060821950347298811, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -918,6 +907,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7117797033773358155, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -19
+      objectReference: {fileID: 0}
     - target: {fileID: 7362882335839837558, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -7
@@ -945,6 +938,7 @@ PrefabInstance:
     - {fileID: 6933122202014094774, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
     - {fileID: 7042572327315255799, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
     - {fileID: 7522069539466196874, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
+    - {fileID: 7111223882565250347, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1912638389691107614, guid: 4df12f2458618254aaf985ae50384e42, type: 3}
       insertIndex: 1
@@ -1023,7 +1017,7 @@ PrefabInstance:
     - target: {fileID: 3681933183022660553, guid: 475092ebd18601044894314164dfb9dd, type: 3}
       propertyPath: sfxButton
       value: 
-      objectReference: {fileID: 873596977}
+      objectReference: {fileID: 0}
     - target: {fileID: 3681933183022660553, guid: 475092ebd18601044894314164dfb9dd, type: 3}
       propertyPath: musicButton
       value: 
