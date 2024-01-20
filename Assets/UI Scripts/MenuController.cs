@@ -39,6 +39,7 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("pressed pause");
         Time.timeScale = 0f; // Pause the game by setting time scale to 0
         isPaused = true;
+          Debug.Log("Time.timeScale: " + Time.timeScale);
     }
 
     private void ResumeGame()
