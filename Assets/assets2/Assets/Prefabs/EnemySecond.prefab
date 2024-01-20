@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 0}
-  walkSpeed: 5
+  walkSpeed: 3
   enemyConfig: {fileID: 11400000, guid: bccb6f65d0da47540bacb680c0ed5970, type: 2}
 --- !u!61 &6554330104233935528
 BoxCollider2D:

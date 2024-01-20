@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 0}
-  walkSpeed: 3
+  walkSpeed: 5
   enemyConfig: {fileID: 11400000, guid: 9a86747ccbafef642b5f65dcfaa99f8c, type: 2}
 --- !u!95 &5335472239330863789
 Animator:
