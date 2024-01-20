@@ -14,6 +14,7 @@ public class weaponCode : MonoBehaviour
      public ParticleSystem muzzleFlash;
      private Vector2 direction;
      
+     
      [SerializeField] private float range = 10;
      private bool isAiming = false;
      private float resetTimer;
@@ -107,7 +108,9 @@ public class weaponCode : MonoBehaviour
             {
                 if (Time.time > bulletPerSecondReseter)
                 {
+                    GameObject.FindWithTag("Player").GetComponent<AudioSource>().Play();
                     muzzleFlash.Emit(30);
+                    
                     bulletPerSecondReseter = Time.time + timeBetweenShots;
                     bulletCount++;
                     enemy.GetComponent<enemyStats>().getHit(Damage);
